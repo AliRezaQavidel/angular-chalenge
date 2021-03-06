@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row align-items-center">
+    <div class="col-lg-4 d-flex justify-content-around" *ngFor="let item of numbersJsonContent" [@flyInOut]>
+      <span>{{ item.value }}</span>
+      <span>{{ item.action == 'add' ? '+' : '*' }}</span>
+      <span>{{ item.action | selectaAtionValue | async }}</span>
+      <span>=</span>
+      <span>{{ item | operation | async }}</span>
+    </div>
+  </div>
+</div>

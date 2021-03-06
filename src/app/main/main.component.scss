@@ -1,0 +1,16 @@
+.row {
+  flex-direction: column;
+
+  div {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 0.25rem;
+    min-height: 3rem;
+    align-items: center;
+    background-color: #fcfcfc;
+    margin: 1rem;
+
+    span {
+      display: inline-block;
+    }
+  }
+}
