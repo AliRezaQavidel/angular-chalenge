@@ -7,10 +7,12 @@ import { MainComponent } from './main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { PipesModule } from 'src/pipe/pipes.module';
+import { MaterialModule } from 'src/material/material.module';
 
 describe('MainComponent', () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
+  let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,21 +20,34 @@ describe('MainComponent', () => {
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        PipesModule
+        PipesModule,
+        MaterialModule
       ],
       declarations: [MainComponent]
-    })
-      .compileComponents();
-  }));
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(MainComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    element = fixture.nativeElement;
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render div tag', () => {
+    const fixture = TestBed.createComponent(MainComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('div'));
+  });
+
+  it('should render span tag', () => {
+    const fixture = TestBed.createComponent(MainComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('span'));
+  });
+
 
 });

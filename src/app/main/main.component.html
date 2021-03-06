@@ -4,7 +4,7 @@
       <span>{{ item.value }}</span>
       <span>{{ item.action == 'add' ? '+' : '*' }}</span>
       <span>{{ item.action | selectaAtionValue | async }}</span>
-      <span>=</span>
+      <span class="equal">=</span>
       <span>{{ item | operation | async }}</span>
     </div>
   </div>

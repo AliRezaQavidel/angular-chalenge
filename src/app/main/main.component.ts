@@ -23,6 +23,7 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
 export class MainComponent implements OnInit {
 
   numbersJsonContent: any = [];
+  title: string;
 
   constructor(private httpService: HttpService,
     private _snackBar: MatSnackBar) { }

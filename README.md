@@ -1,13 +1,45 @@
-# ChalengeApp
+# Angular
 
-To runing the project run the command:
-# NPM I
+This codebase was created to rayka companie chalenge
 
-anh then after node_modules completely downloaded run the below command in your terminal:
-# NG Serve
+## Get started
 
-and for unit testing result you can run the belou command: 
-# NG TEST
+### Clone the repo
 
-and for testing the error management at the reading json files you can set wrong path of json in http.service
-at the argument of get method
+```shell
+git clone https://github.com/AliRezaQavidel/angular-chalenge
+cd intern-angular
+```
+
+### Install npm packages
+
+Install the `npm` packages described in the `package.json` and verify that it works:
+
+```shell
+npm install
+npm start
+```
+
+The `npm start` command builds (compiles TypeScript and copies assets) the application into `dist/`, watches for changes to the source files, and runs `lite-server` on port `3000`.
+
+Shut it down manually with `Ctrl-C`.
+
+#### npm scripts
+
+These are the most useful commands defined in `package.json`:
+
+* `npm start` - runs the TypeScript compiler, asset copier, and a server at the same time, all three in "watch mode".
+* `npm run build` - runs the TypeScript compiler and asset copier once.
+* `npm run build:watch` - runs the TypeScript compiler and asset copier in "watch mode"; when changes occur to source files, they will be recompiled or copied into `dist/`.
+* `npm run lint` - runs `tslint` on the project files.
+* `npm run serve` - runs `lite-server`.
+
+These are the test-related scripts:
+
+* `npm test` - builds the application and runs Intern tests (both unit and functional) one time.
+* `npm run ci` - cleans, lints, and builds the application and runs Intern tests (both unit and functional) one time.
+
+#### error handling test
+
+* for test the error handling go to `http.service.ts` and change the http method json path to a wrong path
+and save the file
