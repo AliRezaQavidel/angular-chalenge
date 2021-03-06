@@ -8,7 +8,6 @@ This codebase was created to rayka companie chalenge
 
 ```shell
 git clone https://github.com/AliRezaQavidel/angular-chalenge
-cd intern-angular
 ```
 
 ### Install npm packages
